@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct ContentView : View {
+    
+    @State var totalClicked: Int = 0
+    
     var body: some View {
-        Text("Hello World")
+        Text("\(totalClicked)")
     }
 }
 
