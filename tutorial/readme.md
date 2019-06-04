@@ -129,6 +129,9 @@ var body: some View {
 
 The `.padding(.all, 40)` will tell this `VStack` to have a 40 point distance to it's closest members on the top, left, right, and bottom.
 
+
+Here is the finished repo {% github maeganjwilson/totalClicked_tut %}
+
 ---
 
 If you enjoyed this article and want more, please consider subscribing to my [Patreon](https://www.patreon.com/maeganwilson_) and checking out my other posts!
