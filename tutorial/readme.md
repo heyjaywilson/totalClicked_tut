@@ -1,17 +1,10 @@
----
-title: How to Make a Button with SwiftUI
-published: false
-description: A tutorial for making a button using SwiftUI and XCode 11.
-tags: swift, ios, swiftui, beta
----
-
 If you are trying to follow along, please know that SwiftUI requires XCode 11 and macOS 10.15, all of which is in developer beta right now.
 
-This will walk you through how to make a basic iOS app that presents the total number of times a button was tapped.
+This post will walk you through how to make a basic iOS app that counts how many times a button is tapped.
 
-# 1. Creatre a new project
+# 1. Create a new project
 
-The first step is to launch XCode and create a new single page iOS application. When creating the iOS application, make sure the `Use SwiftUI` button is checked.
+The first step is to launch XCode and create a new single page iOS application. When creating the iOS app, make sure `Use SwiftUI` is checked.
 
 ![New project](./images/project.png)
 
@@ -66,11 +59,11 @@ VStack {
 // more stuff below
 ```
 
-Now, let's use the libe preview to embed the `Text()` in a button. Command + Click on Increment Total in Live Preview and select `Embed in Button`.
+Now, let's use the live preview to embed the `Text()` in a button. Command + Click on Increment Total in Live Preview and select `Embed in Button`.
 
 ![Menu that appears in XCode 11 when Command + Click on an object](./images/button.png)
 
-We need to adjust the Button code that is now in `ContentView.swift`. Adjust Button to look like the following:
+We need to adjust the Button code that is now in `ContentView.swift`. Adjust button to look like the following:
 
 ``` swift
 var body: some View {
@@ -112,6 +105,22 @@ Button(action: {self.totalClicked = self.totalClicked + 1}) {
 } .padding(.all)
 ```
 The `.all` is adding padding to all sides of the button instead of just to the top, bottom, left, or right.
+
+Finally, let's add padding to the entire `Vstack` so that the app will fill the screen of the device.
+
+``` swift
+var body: some View {
+    Vstack {
+        Text("\(totalClicked)").font(.title)
+        Spacer()
+        Button(action: {self.totalClicked = self.totalClicked + 1}) {
+            Text("Increment Total")
+        }.padding(.all)
+    }.padding(.all, 40)
+}
+```
+
+The `.padding(.all, 40)` will tell this `VStack` to have a 40 point distance to it's closest members on the top, left, right, and bottom.
 
 ---
 
