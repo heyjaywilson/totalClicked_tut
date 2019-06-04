@@ -15,6 +15,9 @@ struct ContentView : View {
     var body: some View {
         VStack {
             Text("\(totalClicked)")
+            Button(action: {self.totalClicked = self.totalClicked + 1}) {
+                Text("Increment Total")
+            }
         }
     }
 }
