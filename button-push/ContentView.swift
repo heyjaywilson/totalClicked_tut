@@ -14,11 +14,11 @@ struct ContentView : View {
     
     var body: some View {
         VStack {
-            Text("\(totalClicked)")
+            Text("\(totalClicked)").font(.title)
             Spacer()
             Button(action: {self.totalClicked = self.totalClicked + 1}) {
                 Text("Increment Total")
-            }
+            }.padding(.all)
         }.padding(.all, 40)
     }
 }
