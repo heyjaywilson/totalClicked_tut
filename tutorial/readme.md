@@ -13,7 +13,7 @@ This post will walk you through how to make a basic iOS app that counts how many
 
 The first step is to launch XCode and create a new single page iOS application. When creating the iOS app, make sure `Use SwiftUI` is checked.
 
-![New project](./images/project.png)
+![New project](https://github.com/maeganjwilson/totalClicked_tut/blob/master/tutorial/images/project.png?raw=true)
 
 # 2. Create a variable and make the app output that variable
 
@@ -36,7 +36,7 @@ struct ContentView : View {
 
 Now, we need to embed the text in a verticle stack to place the button below the `Text()`. To do this Command + Click on the `0` in the live preview and choose `Embed in VStack`.
 
-![Menu that appears in XCode 11 when Command + Click on an object](./images/stackview.png)
+![Menu that appears in XCode 11 when Command + Click on an object](https://github.com/maeganjwilson/totalClicked_tut/blob/master/tutorial/images/stackview.png?raw=true)
 
 By embedding in a VStack, the struct now looks like this:
 
@@ -68,7 +68,7 @@ VStack {
 
 Now, let's use the live preview to embed the `Text()` in a button. Command + Click on Increment Total in Live Preview and select `Embed in Button`.
 
-![Menu that appears in XCode 11 when Command + Click on an object](./images/button.png)
+![Menu that appears in XCode 11 when Command + Click on an object](https://github.com/maeganjwilson/totalClicked_tut/blob/master/tutorial/images/button.png?raw=true)
 
 We need to adjust the Button code that is now in `ContentView.swift`. Adjust button to look like the following:
 
