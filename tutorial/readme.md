@@ -1,3 +1,10 @@
+---
+title: How to Make a Button with SwiftUI
+published: false
+description: A tutorial for making a button using SwiftUI and XCode 11
+tags: swift, ios, swiftui, beta
+---
+
 If you are trying to follow along, please know that SwiftUI requires XCode 11 and macOS 10.15, all of which is in developer beta right now.
 
 This post will walk you through how to make a basic iOS app that counts how many times a button is tapped.
