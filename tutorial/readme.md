@@ -66,7 +66,52 @@ VStack {
 // more stuff below
 ```
 
-Now, let's use the libe preview to embed the `Text()` in a button.
+Now, let's use the libe preview to embed the `Text()` in a button. Command + Click on Increment Total in Live Preview and select `Embed in Button`.
+
+![Menu that appears in XCode 11 when Command + Click on an object](./images/button.png)
+
+We need to adjust the Button code that is now in `ContentView.swift`. Adjust Button to look like the following:
+
+``` swift
+var body: some View {
+    VStack {
+        Text("\(totalClicked)")
+        Button(action: {self.totalClicked = self.totalClicked + 1}) {
+        Text("Increment Total")
+        }
+    }
+}
+```
+
+Now, if you run the app it will work!
+
+# 5. (OPTIONAL) Add some style to the app!
+
+Currently, the button and the text have no space between each other and the size of the total is quite small. In SwiftUI, you can adjust this pretty easily.
+
+First, let's adjust the font size of the total by adding `.font(.title)` after the Text call.
+
+``` swift
+Text("\(totalClicked").font(.title)
+```
+
+Next, we will add some space between the button and the text. To do this, we need to add `Spacer()` between the text and the button.
+
+``` swift
+Text("\(totalClicked)").font(.title)
+Spacer()
+Button(action: {self.totalClicked = self.totalClicked + 1}) {
+    Text("Increment Total")
+}       
+```
+The touch target on the button is a little small, so to make it bigger we will add padding to it.
+
+``` swift 
+Button(action: {self.totalClicked = self.totalClicked + 1}) {
+    Text("Increment Total")
+} .padding(.all)
+```
+The `.all` is adding padding to all sides of the button instead of just to the top, bottom, left, or right.
 
 ---
 
