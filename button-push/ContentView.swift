@@ -13,7 +13,9 @@ struct ContentView : View {
     @State var totalClicked: Int = 0
     
     var body: some View {
-        Text("\(totalClicked)")
+        VStack {
+            Text("\(totalClicked)")
+        }
     }
 }
 
