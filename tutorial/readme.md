@@ -13,7 +13,7 @@ This will walk you through how to make a basic iOS app that presents the total n
 
 The first step is to launch XCode and create a new single page iOS application. When creating the iOS application, make sure the `Use SwiftUI` button is checked.
 
-![New project](/images/project.png)
+![New project](./images/project.png)
 
 # 2. Create a variable and make the app output that variable
 
@@ -34,7 +34,37 @@ struct ContentView : View {
 
 # 3. Embed the `Text()` in a Verticle Stack
 
-Now, we need to embed the text in a verticle stack to place the button below the `Text()`.
+Now, we need to embed the text in a verticle stack to place the button below the `Text()`. To do this Command + Click on the `0` in the live preview and choose `Embed in VStack`.
+
+![Menu that appears in XCode 11 when Command + Click on an object](./images/stackview.png)
+
+By embedding in a VStack, the struct now looks like this:
+
+```swift
+struct ContentView : View {
+
+    @State var totalClicked: Int = 0
+
+    var body: some View {
+          VStack { // this was added
+            Text("Hello World")
+          }
+    }
+}
+```
+
+# 4. Add a Button with an action
+
+It's time to add a button. A way to do this is by first adding a `Text()`. Add the following to your struct:
+
+``` swift
+// more stuff above
+VStack { // this was added in step 3
+    Text("\(totalClicked)") // this was added in step 2
+    Text("Increment Total) // ADD THIS!!
+}
+// more stuff below
+```
 
 ---
 
