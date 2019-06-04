@@ -59,12 +59,14 @@ It's time to add a button. A way to do this is by first adding a `Text()`. Add t
 
 ``` swift
 // more stuff above
-VStack { // this was added in step 3
-    Text("\(totalClicked)") // this was added in step 2
-    Text("Increment Total) // ADD THIS!!
+VStack { 
+    Text("\(totalClicked)")
+    Text("Increment Total) // <- This is what to add
 }
 // more stuff below
 ```
+
+Now, let's use the libe preview to embed the `Text()` in a button.
 
 ---
 
